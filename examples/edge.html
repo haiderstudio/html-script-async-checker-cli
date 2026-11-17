@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Edge cases</title>
+<SCRIPT SRC="upper.js" ASYNC></SCRIPT>
+<script
+  src="split.js"
+  defer></script>
+<script src="valued.js" async="async"></script>
+<script src="valued-defer.js" defer="defer"></script>
+<script>console.log('inline script, no src');</script>
+<!-- A script in a comment is not a script:
+<script src="comment.js"></script>
+-->
+<script>
+// A script tag written in a script string is not a script either:
+var markup = '<script src="string.js"></script>';
+</script>
+</head>
+<body>
+<script src="body-end.js"></script>
+</body>
+</html>
